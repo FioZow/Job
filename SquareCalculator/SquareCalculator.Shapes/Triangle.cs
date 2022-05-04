@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace SquareCalculator.SquareCalculator.Shapes
 {
-    class Triangle : IShape
+    public class Triangle : IShape
     {
         private readonly double _sideA;
         private readonly double _sideB;
@@ -15,6 +15,8 @@ namespace SquareCalculator.SquareCalculator.Shapes
             _sideA = sideA;
             _sideB = sideB;
             _sideC = sideC;
+            if (!CheckTriangleExists())
+                throw new ArgumentOutOfRangeException("Invalid parameters. Triangle cannot exist.");
             isRightTriangle = IsRightTriangle();
         }
 
@@ -30,6 +32,17 @@ namespace SquareCalculator.SquareCalculator.Shapes
             var maxSide = new[] { _sideA, _sideB, _sideC }.Max();
 
             return maxSide * maxSide * 2 == _sideA * _sideA + _sideB * _sideB + _sideC * _sideC;
+        }
+
+        private bool CheckTriangleExists()
+        {
+            if (_sideA > 0 && _sideB > 0 && _sideC > 0)
+            {
+                if (_sideA + _sideB > _sideC && _sideA + _sideC > _sideB && _sideC + _sideB > _sideA)
+                    return true;
+            }
+
+            return false;
         }
     }
 }

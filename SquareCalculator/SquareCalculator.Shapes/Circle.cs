@@ -2,12 +2,14 @@
 
 namespace SquareCalculator.SquareCalculator.Shapes
 {
-    class Circle : IShape
+    public class Circle : IShape
     {
         private readonly double _radius;
 
         public Circle(double radius)
         {
+            if (radius <= 0)
+                throw new ArgumentOutOfRangeException("Invalid radius value.");
             _radius = radius;
         }
 
