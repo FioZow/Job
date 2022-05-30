@@ -1,4 +1,4 @@
-# Job-test.-C-Mindbox
+# Job
 
 Задание 1:
 
