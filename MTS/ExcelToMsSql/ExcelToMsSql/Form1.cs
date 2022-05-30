@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExcelToMsSql.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,8 @@ namespace ExcelToMsSql
         private void Form1_Load(object sender, EventArgs e)
         {
             var table = ExcelReader.ExcelParse(@"..\..\..\Задание_.xlsx", "Статус работ");
+            var db = new ModelDb();
+            MsSqlWriter.WriteToSql(table, db);
         }
     }
 }

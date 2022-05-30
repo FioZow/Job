@@ -22,6 +22,7 @@ namespace ExcelToMsSql
                 using (System.Data.OleDb.OleDbDataAdapter import = new System.Data.OleDb.OleDbDataAdapter("select * from [" + workSheetName + "$]", con))
                     import.Fill(table);
             }
+
             return table;
         }
     }
