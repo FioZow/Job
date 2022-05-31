@@ -20,9 +20,14 @@ namespace ExcelToMsSql
 
         private void Form1_Load(object sender, EventArgs e)
         {
+        }
+
+        private void ConvertButton_Click(object sender, EventArgs e)
+        {
             var table = ExcelReader.ExcelParse(@"..\..\..\Задание_.xlsx", "Статус работ");
             var db = new ModelDb();
             MsSqlWriter.WriteToSql(table, db);
+            Close();
         }
     }
 }

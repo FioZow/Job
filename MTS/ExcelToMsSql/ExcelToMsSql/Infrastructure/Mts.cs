@@ -31,13 +31,12 @@ namespace ExcelToMsSql.Infrastructure
         [StringLength(100)]
         public string object_number_db { get; set; }
 
-        [StringLength(1000)]
         public string address { get; set; }
 
         [StringLength(100)]
         public string placement_equipment_A { get; set; }
 
-        [StringLength(200)]
+        [StringLength(250)]
         public string accessory_equipment_A { get; set; }
 
         public int? programm_number { get; set; }
@@ -71,7 +70,6 @@ namespace ExcelToMsSql.Infrastructure
         [Column(TypeName = "date")]
         public DateTime? factual_approval_date_for_2_task_result { get; set; }
 
-        [StringLength(1000)]
         public string note_for_2_task { get; set; }
 
         [Column(TypeName = "date")]
@@ -86,7 +84,6 @@ namespace ExcelToMsSql.Infrastructure
         [Column(TypeName = "date")]
         public DateTime? planning_ready_for_execution_date_for_3_task { get; set; }
 
-        [StringLength(1000)]
         public string access_permission_note_for_3_task { get; set; }
 
         [StringLength(100)]
@@ -101,7 +98,6 @@ namespace ExcelToMsSql.Infrastructure
         [Column(TypeName = "date")]
         public DateTime? factual_completion_date_for_4_task_result { get; set; }
 
-        [StringLength(1000)]
         public string note_for_4_task { get; set; }
 
         public int? object_class { get; set; }
@@ -133,7 +129,6 @@ namespace ExcelToMsSql.Infrastructure
         [Column(TypeName = "date")]
         public DateTime? planning_ready_to_start_date_for_3_task { get; set; }
 
-        [StringLength(1000)]
         public string executor_of_2_and_3_tasks { get; set; }
     }
 }

@@ -13,6 +13,7 @@ namespace ExcelToMsSql
     {
         public static void WriteToSql(DataTable table, ModelDb db)
         {
+            
             foreach (DataRow row in table.Rows)
             {
                 var entity = new Mts();

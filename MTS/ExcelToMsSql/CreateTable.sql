@@ -1,8 +1,3 @@
-
-
-ALTER DATABASE mts
-COLLATE cyrillic_general_ci_as;
-
 CREATE TABLE mts(
 	id int IDENTITY(1,1) NOT NULL PRIMARY KEY,
 	district nvarchar(100),
