@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace ExcelToMsSql
 {
-    public partial class Form1 : Form
+    public partial class Test0Form : Form
     {
-        public Form1()
+        public Test0Form()
         {
             InitializeComponent();
         }

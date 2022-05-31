@@ -1,6 +1,6 @@
 ﻿namespace ExcelToMsSql
 {
-    partial class Form1
+    partial class Test0Form
     {
         /// <summary>
         /// Required designer variable.
