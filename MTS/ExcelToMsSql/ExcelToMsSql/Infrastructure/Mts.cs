@@ -18,7 +18,7 @@ namespace ExcelToMsSql.Infrastructure
 
         [StringLength(100)]
         public string first_stage_manager { get; set; }
-        
+
         [StringLength(100)]
         public string contractor_for_1_task { get; set; }
 
@@ -42,35 +42,48 @@ namespace ExcelToMsSql.Infrastructure
 
         public int? programm_number { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? request_date { get; set; }
 
         public bool? realization_rejected { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? planning_completion_date_for_1_task { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? submission_date_of_1_task_result_for_approval { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? predict_approval_date_for_1_task_result { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? factual_approval_date_for_1_task_result { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? planning_completion_date_for_2_task { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? factual_completion_date_for_2_task { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? factual_ready_for_execution_date_for_2_task { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? factual_approval_date_for_2_task_result { get; set; }
 
         [StringLength(1000)]
         public string note_for_2_task { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? factual_ready_for_execution_date_for_3_task { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? employees_list_receiving_date_for_access_for_3_task { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? access_permission_notification_date_for_3_task { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? planning_ready_for_execution_date_for_3_task { get; set; }
 
         [StringLength(1000)]
@@ -79,10 +92,13 @@ namespace ExcelToMsSql.Infrastructure
         [StringLength(100)]
         public string name_KA { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? planning_completion_date_for_4_task { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? predict_completion_date_for_4_task_result { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? factual_completion_date_for_4_task_result { get; set; }
 
         [StringLength(1000)]
@@ -90,23 +106,31 @@ namespace ExcelToMsSql.Infrastructure
 
         public int? object_class { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? planning_completion_date_for_5_task { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? factual_completion_date_for_5_task_result { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? planning_start_date_for_3_task { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? factual_start_date_for_3_task { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? planning_finish_date_for_3_task { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? factual_finish_date_for_3_task { get; set; }
 
         [StringLength(100)]
         public string menager_of_4_task { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? planning_ready_to_start_date_for_2_task { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? planning_ready_to_start_date_for_3_task { get; set; }
 
         [StringLength(1000)]
